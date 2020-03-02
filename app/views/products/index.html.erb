@@ -1,0 +1,89 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Products</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sku</th>
+      <th>Product name</th>
+      <th>Size</th>
+      <th>Features</th>
+      <th>Price</th>
+      <th>User</th>
+      <th>Category</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.sku %></td>
+        <td><%= product.product_name %></td>
+        <td><%= product.size %></td>
+        <td><%= product.features %></td>
+        <td><%= product.price %></td>
+        <td><%= product.user %></td>
+        <td><%= product.category %></td>
+        <td><%= link_to 'Show', product %></td>
+        <td><%= link_to 'Edit', edit_product_path(product) %></td>
+        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<!--CARD DECK-->
+<div class="container">
+<div class="row row-cols-1 row-cols-md-2">
+  <div class="col mb-4">
+    <div class="card">
+      <img src="https://www.doite.cl/233639-thickbox_default/cool-active-m-s-red.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col mb-4">
+    <div class="card">
+      <img src="https://hobbledehoyrecords.com/wp-content/uploads/2015/03/poster-hobbleday2015-mockup-compressed-2.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col mb-4">
+    <div class="card">
+      <img src="https://cdn.dribbble.com/users/2181562/screenshots/6754952/4.5f_2x.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col mb-4">
+    <div class="card">
+      <img src="https://i.pinimg.com/originals/1c/ca/d0/1ccad05bf7f8eee14fc5bf8feb517603.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button type="button" class="btn btn-outline-dark">
+<%= link_to 'New Product', new_product_path %> 
+</button>
+<br>
+<br>
+<button type="button" class="btn btn-outline-dark">
+<%= link_to 'Back', new_product_path %>
+</button>
+
+
