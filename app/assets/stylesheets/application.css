@@ -16,16 +16,35 @@
 
 body {
     font-family: 'IBM Plex Sans'
+
 }
 
+#body1 {
+    background-color: #16181a;
+}
 
+#iconsnavbar {
+    fill: white;
+    color: white;
+    text-decoration: none;
 
-
+}
  /* FOOTER */
 
  footer {
-    background-color: grey;
+    background-color: #16181a;
     fill: white;
     color: white;
 
 }
+
+#footerinterno {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: grey;
+    
+   
+  }
+ 
