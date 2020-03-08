@@ -5,25 +5,30 @@ email: admin@mail.com
 name: admin
 password: desafiolatam
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# COUNTER_HELPS _YOU
 
-Things you may want to cover:
+Portafolio de fotografía
 
-* Ruby version
+El proyecto es un portafolio fotográfico con galería, tienda y blog. Está realizada con Ruby 2.6.3, Rails 5.2.4 y base de datos POstgresql
 
-* System dependencies
+El diagrama conceptual muestra las principales entidades con lo que trabajará la aplicación:
 
-* Configuration
+![alt_text][concept]
 
-* Database creation
+[concept]: /model.png  "diagrama conceptual"
 
-* Database initialization
+El tablero Trello con el backlog y las historias de usuario esta disponible en el siguiente link:
+[tablero Trello] (https://trello.com/b/1lCCGjMg/proyectofinal)
 
-* How to run the test suite
+![alt text][logic]
 
-* Services (job queues, cache servers, search engines, etc.)
+[logic]: /data.png
 
-* Deployment instructions
 
-* ...
+## Pasos para levantar el proyecto
+-  Clonar el repo.
+-  Rails db:create
+-  Rails db:migrate
+-  Rails db:seed
+-  Rails s
+-  Enjoy
