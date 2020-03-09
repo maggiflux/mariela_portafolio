@@ -8,10 +8,75 @@
 
 #seed productos
 
+Category.destroy_all 
+Product.destroy_all
 
-#seed galeria
+
+Category.create(
+        name: "poster"
+)
+
+Category.create(
+    name: "polerones"
+)
+
+Category.create(
+    name: "libretas"
+)
+
+Category.create(
+    name: "tazas"
+)
+
+Category.create(
+    name: "poleras"
+)
+
+
+Category.create(
+    name: "cuadros"
+)
 
 
 
-#seed de admin
-Admin.create(email: "admin@mail.com", name: "admin", password: "desafiolatam")
+
+Product.create(
+    product_name: "Poster Mérida",
+    size: "25cm x 89cm",
+    features: "papel couché 300gr",
+    price: 30.000,
+    category_id: 1,
+    picture: "https://www.doite.cl/233639-thickbox_default/cool-active-m-s-red.jpg"
+  )
+
+  Product.create(
+    product_name: "Poster Mérida",
+    size: "25cm x 89cm",
+    features: "papel couché 300gr",
+    price: 30.000,
+    category_id: 1,
+    picture: "https://www.doite.cl/233639-thickbox_default/cool-active-m-s-red.jpg"
+  )
+
+  Product.create(
+    product_name: "Taza Verde",
+    size: "25cm x 89cm",
+    features: "papel couché 300gr",
+    price: 30.000,
+    category_id: 3,
+    picture: "https://www.doite.cl/233639-thickbox_default/cool-active-m-s-red.jpg"
+  )
+
+  Product.create(
+    product_name: "Cuadro Mérida",
+    size: "25cm x 89cm",
+    features: "papel couché 300gr",
+    price: 30.000,
+    category_id: 3,
+    picture: "https://www.doite.cl/233639-thickbox_default/cool-active-m-s-red.jpg"
+  )
+
+
+
+
+
