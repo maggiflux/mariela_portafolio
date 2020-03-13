@@ -12,6 +12,7 @@ class BillingsController < ApplicationController
         render json: payment.error
       end
     end
+
     def execute
       if Billing.execute_payment(current_user, params[:paymentId], params[:PayerID])
         redirect_to root_path, notice: 'La compra se realizó con éxito!' 
@@ -19,6 +20,9 @@ class BillingsController < ApplicationController
         redirect_to root_path, notice: 'No se realizó la compra'
       end
     end
-  end
+
+end
+
+  
 
   #redirect_url=https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_express-checkout&token=EC-3WL412614B155733L

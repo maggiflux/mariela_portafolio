@@ -24,3 +24,4 @@ class OrdersController < ApplicationController
       @total = @orders.pluck("price * quantity").sum()
     end
   end
+  

@@ -3,7 +3,7 @@
 
   <head>
     <!--ICONO PESTAÑA-->
-    <link rel="shortcut icon" href="/assets/logomagenta.svg">
+    <link rel="shortcut icon" href="/assets/mlogo50x50.svg">
     <!--CSS-->
     <link rel="stylesheet" href="application.css">
     <!--FONTAWESOME-->
@@ -25,44 +25,70 @@
 
 <body>
 
-  <!--NAVBAR-->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top text-white p-3 px-5">
-  
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
-      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarText">
-      <ul class="navbar-nav mr-auto">
-        <a class="navbar-brand" href="#">
+<!--NAVBAR-->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top text-white p-3 px-5">
+
+     <!--LOGO CON LINK AL HOME PAGE-->
+     <a class="navbar-brand" href="#">
           <!--<%= link_to 'PORTAFOLIO', home_index_path %>-->
           <%= link_to home_index_path(@home) do %>
           <img src="/assets/logo_navbar.svg" width="150" height="30" alt="logo">
           <% end %>
-
         </a>
-        <li class="nav-item dropdown active">
+  
+  
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <div class="navbar-nav mr-auto">
+      
+  
+    
+    
+    </div>
+   
+    <div class="navbar-text">
+       
+
+        <!--CATEGORIAS DROPDOWN-->
+        <div class="nav-item dropdown active ">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false">
             Categorías
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">Galería</a>
-            <a class="dropdown-item" href="#">Tienda</a>
-            <a class="dropdown-item" href="#">Blog</a>
+            <a class="dropdown-item text-dark" href="#">Galería</a>
+            <a class="dropdown-item text-dark" href="#">Tienda</a>
+            <a class="dropdown-item text-dark" href="#">Blog</a>
           </div>
-        </li>
-      </ul>
-      <span id="iconsnavbar" class="navbar-text">
-        <%= link_to products_path(@products) do %>
+        </div>
+      
+      <!--ICONOS-->
+
+         <%= link_to orders_path(@order) do %>
         <i class="text-muted fas fa-shopping-cart"></i>
         <% end %>
         <%= link_to new_user_session_path(@user) do %>
         <i class="text-muted far fa-user-circle"></i>
         <% end %>
-      </span>
+        <%= link_to "Sign out", destroy_user_session_path, method: "delete" %>
+
+
+
+
+
     </div>
-  </nav>
+  </div>
+  </div>
+</nav>
+
+  <!--NAVBAR 2-->
+
+
+
 <div class="body1">
   <!-- Image and text -->
   <%= yield %>

@@ -15,6 +15,7 @@ class ProductsController < ApplicationController
   # GET /products/new
   def new
     @product = Product.new
+    @categories = Category.pluck(:name, :id)
   end
 
   # GET /products/1/edit
@@ -25,6 +26,7 @@ class ProductsController < ApplicationController
   # POST /products.json
   def create
     @product = Product.new(product_params)
+    @product.user = current_user
 
     respond_to do |format|
       if @product.save
@@ -54,7 +56,7 @@ class ProductsController < ApplicationController
   # DELETE /products/1
   # DELETE /products/1.json
   def destroy
-    authorize! :destroy, @product
+    #authorize! :destroy, @product
     @product.destroy
     respond_to do |format|
       format.html { redirect_to products_url, notice: 'Product was successfully destroyed.' }
@@ -62,6 +64,16 @@ class ProductsController < ApplicationController
     end
   end
 
+  def delete_image
+    begin
+      @image = ActiveStorage::Attachment.find(params[:id])
+      @image.purge
+      redirect_to product_path(@product), notice: 'Imagen eliminada'
+    rescue ActiveRecord::RecordNotFound
+      redirect_to product_path(@product), alert: 'Error al eliminar la imagen'
+    end
+  end
+    
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -71,6 +83,9 @@ class ProductsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def product_params
-      params.require(:product).permit(:sku, :product_name, :size, :features, :price, :user_id, :category_id)
+      params.require(:product).permit(:sku, :product_name, :size, :features, :price, :user_id, :category_id, images: [])
     end
 end
+
+
+

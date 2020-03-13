@@ -12,6 +12,11 @@
   <% end %>
 
   <div class="field">
+    <%= form.label :image %>
+    <%= form.file_field :image %>
+  </div>
+
+  <div class="field">
     <%= form.label :sku %>
     <%= form.text_field :sku %>
   </div>
@@ -37,13 +42,8 @@
   </div>
 
   <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
-  </div>
-
-  <div class="field">
     <%= form.label :category_id %>
-    <%= form.select :category_id, Product.category_ids.keys %>
+    <%= form.select :category_id, options_for_select(@categories) %>
   </div>
 
   <div class="actions">

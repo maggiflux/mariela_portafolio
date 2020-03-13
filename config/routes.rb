@@ -7,9 +7,21 @@ Rails.application.routes.draw do
       end
   end
 
+  resources :products do
+    resources :orders, only: :create
+    delete 'delete_image/:image_id', on: :member, to: 'products#delete_image',
+    as: 'delete_image'
+  end
+
   get 'home/index'
   get 'products', to: "products#index"
   
+  resources :orders, only: :index do
+    collection do
+      get 'clean'
+    end
+  end
+
   resources :products
   resources :categories
   devise_for :users

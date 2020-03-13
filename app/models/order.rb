@@ -10,7 +10,22 @@ class Order < ApplicationRecord
   end
 
   def self.to_paypal_items
-    where(nil).map
-    
+    where(nil).map   
   end
+
+  def self.to_paypal_items
+    where(nil).map do |order|
+      item = {}
+      item[:name] = order.product.product_name
+      item[:sku] = order.id.to_s
+      item[:price] = order.price.to_s
+      item[:currency] = 'USD'
+      item[:quantity] = order.quantity
+      item
+    end
+  end
+    
+
 end
+
+

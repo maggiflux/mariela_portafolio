@@ -1,5 +1,15 @@
 <p id="notice"><%= notice %></p>
 
+<% if @product.images.attached? %>
+  <p>
+    <strong>Images:</strong>
+    <br>
+    <% @product.images.each do |image| %>
+    <%= image_tag image.variant(resize: "200x200") %>
+    <% end %>
+  </p>
+<% end %>
+
 <p>
   <strong>Sku:</strong>
   <%= @product.sku %>
