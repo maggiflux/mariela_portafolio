@@ -12,11 +12,14 @@
 
 ActiveRecord::Schema.define(version: 2020_03_09_183401) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
-    t.integer "record_id", null: false
-    t.integer "blob_id", null: false
+    t.bigint "record_id", null: false
+    t.bigint "blob_id", null: false
     t.datetime "created_at", null: false
     t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
     t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
@@ -38,7 +41,7 @@ ActiveRecord::Schema.define(version: 2020_03_09_183401) do
     t.string "payment_method"
     t.decimal "amount", precision: 5, scale: 2
     t.string "currency"
-    t.integer "user_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_billings_on_user_id"
@@ -51,13 +54,13 @@ ActiveRecord::Schema.define(version: 2020_03_09_183401) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.boolean "payed"
+    t.boolean "payed", default: false
     t.decimal "price", precision: 5, scale: 2
-    t.integer "user_id"
-    t.integer "product_id"
+    t.bigint "user_id"
+    t.bigint "product_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "billing_id"
+    t.bigint "billing_id"
     t.integer "quantity", default: 0
     t.index ["billing_id"], name: "index_orders_on_billing_id"
     t.index ["product_id"], name: "index_orders_on_product_id"
@@ -70,8 +73,8 @@ ActiveRecord::Schema.define(version: 2020_03_09_183401) do
     t.string "size"
     t.text "features"
     t.float "price"
-    t.integer "user_id"
-    t.integer "category_id"
+    t.bigint "user_id"
+    t.bigint "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "picture"
@@ -95,4 +98,11 @@ ActiveRecord::Schema.define(version: 2020_03_09_183401) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "billings", "users"
+  add_foreign_key "orders", "billings"
+  add_foreign_key "orders", "products"
+  add_foreign_key "orders", "users"
+  add_foreign_key "products", "categories"
+  add_foreign_key "products", "users"
 end

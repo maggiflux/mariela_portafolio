@@ -6,7 +6,7 @@ gem 'image_processing', '~> 1.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4', '>= 5.2.4.1'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -28,7 +28,6 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'cancancan'
 # Use ActiveStorage variant
-gem 'image_processing', '~> 1.2'
 # gem 'mini_magick', '~> 4.8'
 gem 'paypal-sdk-rest'
 # Use Capistrano for deployment
