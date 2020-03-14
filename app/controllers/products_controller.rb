@@ -28,16 +28,16 @@ class ProductsController < ApplicationController
     @product = Product.new(product_params)
     @product.user = current_user
 
-    respond_to do |format|
+    
       if @product.save
-        format.html { redirect_to products_path, notice: 'Product was successfully created.' }
-        format.json { render :show, status: :created, location: @product }
+         redirect_to products_path, notice: 'Product was successfully created.' 
+       
       else
-        format.html { render :new }
-        format.json { render json: @product.errors, status: :unprocessable_entity }
+        render :new 
+       
       end
     end
-  end
+
 
   # PATCH/PUT /products/1
   # PATCH/PUT /products/1.json
@@ -83,7 +83,7 @@ class ProductsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def product_params
-      params.require(:product).permit(:sku, :product_name, :size, :features, :price, :user_id, :category_id, images: [])
+      params.require(:product).permit(:sku, :product_name, :size, :features, :price, :user_id, :category_id, :image)
     end
 end
 

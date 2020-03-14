@@ -11,12 +11,19 @@
       <% row.each do |product| %>
         <div class="col">
           <div class="card">
-          <% if product.images.attached? %>
-          <% product.images.each do |image| %>
-          <%= image_tag @product.image.url %>
-          <% end %>
+
+
+          
+         <% if product.image.present? %>
          
-          <% end %>
+         <% if product.image.attached? %>
+
+             
+              <%= image_tag product.image %>
+            <% end %>
+              <% end %>
+      
+
           <div class="card-body">
             <h5 class="card-title"><%= product.product_name %></h5>
             <p class="card-text"><%= product.size %></p>
@@ -25,7 +32,7 @@
             <br>
               <%= link_to "Agregar al carro", product_orders_path(product), class: 'btn btn-success', method: :post  %>
               <br>
-              <% if current_user %>
+              <% if current_user.admin %>
               <%= link_to 'Eliminar', product_path(product), class: 'btn btn-success', method: :delete, data: {confirm: 'Seguro?'} %>
               <% end %>
           </div>

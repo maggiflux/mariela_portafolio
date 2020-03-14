@@ -23,6 +23,9 @@ body {
     background-color: #16181a;
 }
 
+.boton {
+    text-decoration: none;
+}
 
  footer {
     background-color: #22262b;
