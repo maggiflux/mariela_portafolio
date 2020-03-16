@@ -1,11 +1,11 @@
 <!--PRIMER PARALLAX-->
 <div class="img-fluid" alt="Responsive image" alt="morpho">
-<%= image_tag "Morpho.jpg" %>
+  <%= image_tag "Morpho.jpg" %>
 </div>
 
 <!--IMAGEN FIJA-->
-<div class="img-fluid" alt="Responsive image" alt="notas_cromaticas_1">
-<%= image_tag "n1.jpg" %>
+<div class="">
+   <img src="/assets/n1.jpg" class="img-fluid" alt="Responsive image" alt="primavera1">
 </div>
 
 
@@ -27,7 +27,7 @@
         </div>
       </div>
       <div class="carousel-item">
-         <img src="/assets/t4.jpg" class="d-block w-100" alt="t4">
+        <img src="/assets/t4.jpg" class="d-block w-100" alt="t4">
         <div class="carousel-caption d-none d-md-block">
           <h5>AGREGAR TITULO</h5>
           <p>Y SUBTITULO LINK.</p>
@@ -63,11 +63,11 @@
   <div class="card-body">
     <h5 class="card-title">xxxxxxx</h5>
     <p class="card-text">Texto explicando.</p>
-    
+
     <a href="localhost3000/contact" class="btn btn-primary">Contáctame</a>
   </div>
   <div class="card-footer text-muted">
-   <br>
+    <br>
   </div>
 </div>
 
@@ -81,8 +81,9 @@
       <div class="card-body">
         <h5 class="card-title"><strong>Cuadros</strong></h5>
         <hr>
-        <p class="card-text">Impresos en lienzo o papel fotográfico con montaje en cañuelas y parpastú.</p> 
-        <button type="button" class="btn btn-secondary btn-sm"><%= link_to products_path(@products) do %> Ver más <% end %></button>
+        <p class="card-text">Impresos en lienzo o papel fotográfico con montaje en cañuelas y parpastú.</p>
+        <button type="button" class="btn btn-secondary btn-sm"><%= link_to products_path(@products) do %> Ver más
+          <% end %></button>
       </div>
     </div>
     <div class="card">
@@ -91,7 +92,8 @@
         <h5 class="card-title"><strong>Posters</strong></h5>
         <hr>
         <p class="card-text">Impresos en papel fotográfico matte y brillante.</p>
-          <button type="button" class="btn btn-secondary btn-sm"><%= link_to products_path(@products) do %> Ver más <% end %></button>
+        <button type="button" class="btn btn-secondary btn-sm"><%= link_to products_path(@products) do %> Ver más
+          <% end %></button>
       </div>
     </div>
     <div class="card">
@@ -100,7 +102,8 @@
         <h5 class="card-title"><strong>Poleras y sweters</strong></h5>
         <hr>
         <p class="card-text">Todas las tallas disponibles, colores y diseños.</p>
-          <button type="button" class="btn btn-secondary btn-sm"><%= link_to products_path(@products) do %> Ver más <% end %></button>
+        <button type="button" class="btn btn-secondary btn-sm"><%= link_to products_path(@products) do %> Ver más
+          <% end %></button>
       </div>
     </div>
     <div class="card">
@@ -109,19 +112,19 @@
         <h5 class="card-title"><strong>Cuadernos y otros</strong></h5>
         <hr>
         <p class="card-text">Cuadernos con hojas rayadas, tazas.</p>
-       
-       
-  
-      
-      
-      <div class="button btn-sm text-light btn btn-secondary">
-          <%= link_to 'Ver más', products_path(@product), :class => "btn" %> 
-      </div>
-     
-      
-      
-      
-      
+
+
+
+
+
+        <div class="button btn-sm text-light btn btn-secondary">
+          <%= link_to 'Ver más', products_path(@product), :class => "btn" %>
+        </div>
+
+
+
+
+
       </div>
     </div>
   </div>
@@ -130,10 +133,7 @@
 <!--TERCER PARALLAX-->
 
 <div class="">
-<img src="/assets/primavera1.jpg" class="img-fluid" alt="Responsive image" alt="primavera1">
+  <img src="/assets/primavera1.jpg" class="img-fluid" alt="Responsive image" alt="primavera1">
 </div>
 
 <!--BLOG-->
-
-
-

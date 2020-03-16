@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  get 'gallery/home'
   resources :billings, only: [] do
       collection do 
         get 'pre_pay'
@@ -22,6 +23,7 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :gallery
   resources :products
   resources :categories
   devise_for :users
