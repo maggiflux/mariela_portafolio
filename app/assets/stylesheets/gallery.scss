@@ -9,6 +9,7 @@
   }
   
   .gallery-block .heading h2{
+      font-family: 'IBM Plex Sans';
       font-weight: bold;
       font-size: 1.4rem;
       text-transform: uppercase;
@@ -37,6 +38,7 @@
       left: 0;
       color: #fff;
       padding: 10px;
+      font-family: 'IBM Plex Sans';
       font-size: 17px;
       line-height: 18px;
       width: 100%;
@@ -51,11 +53,13 @@
   }
   
   .gallery-block.compact-gallery .item .description .description-heading{
+    font-family: 'IBM Plex Sans';
     font-size: 1em;
     font-weight: bold;
   }
   
   .gallery-block.compact-gallery .item .description .description-body{
+    font-family: 'IBM Plex Sans';
     font-size: 0.8em;
     margin-top: 10px;
     font-weight: 300;

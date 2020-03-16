@@ -31,7 +31,7 @@
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
   </script>
   
-  
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css" />
     <link rel="stylesheet" href="compact-gallery.css">
@@ -88,9 +88,21 @@
             Categorías
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item text-dark" href="#">Galería</a>
-            <a class="dropdown-item text-dark" href="#">Tienda</a>
+
+           <div class="dropdown-item text-dark">
+            <%= link_to gallery_home_path(@gallery) %>
+            </div>
+           
+            <div class="dropdown-item text-dark">
+            <%= link_to 'Tienda', products_path(@product) %>
+            </div>
+
+
+            
             <a class="dropdown-item text-dark" href="#">Blog</a>
+
+
+
           </div>
         </div>
       
