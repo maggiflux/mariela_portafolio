@@ -11,7 +11,8 @@ class BillingsController < ApplicationController
       else
         render json: payment.error
       end
-    end
+    end 
+  
 
     def execute
       if Billing.execute_payment(current_user, params[:paymentId], params[:PayerID])

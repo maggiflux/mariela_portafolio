@@ -2,7 +2,7 @@ class Billing < ApplicationRecord
   belongs_to :user
 
   def self.init_payment(items,total)
-    Paypal::SDK::REST::Payment.new({
+    PayPal::SDK::REST::Payment.new({
       intent: "sale",
       payer: { payment_method: "paypal" },
       redirect_urls: {
@@ -17,7 +17,7 @@ class Billing < ApplicationRecord
 
 
       def self.execute_payment(current_user, payment_id, client_id)
-        paypal_payment = Paypal::SDK::REST::Payment.find(payment_id)
+        paypal_payment = PayPal::SDK::REST::Payment.find(payment_id)
         return false unless paypal_payment.execute(payer_id: client_id)
 
         amount = paypal_payment.transactions.first.amount.total

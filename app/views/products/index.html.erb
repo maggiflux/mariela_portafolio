@@ -9,21 +9,15 @@
   <div class="row">
     <% @products.each_slice(4) do |row| %>
       <% row.each do |product| %>
-        <div class="col">
+        <div class="col-md-3">
           <div class="card">
-
-
           
-         <% if product.image.present? %>
-         
-         <% if product.image.attached? %>
-
-             
-              <%= image_tag product.image %>
+         <% if product.image.present? %>  
+         <% if product.image.attached? %>      
+              <%= image_tag product.image, size: "200x220" %>
             <% end %>
               <% end %>
       
-
           <div class="card-body">
             <h5 class="card-title"><%= product.product_name %></h5>
             <p class="card-text"><%= product.size %></p>
@@ -32,7 +26,12 @@
             <br>
               <%= link_to "Agregar al carro", product_orders_path(product), class: 'btn btn-success', method: :post  %>
               <br>
-              <% if current_user.admin %>
+              <!--current_user.admin-->
+              <% if current_user %>
+              <%= link_to 'Edit', edit_product_path(product), class: 'btn btn-success', method: :edit %>
+              <% end %>
+              <!--current_user.admin-->
+              <% if current_user %>
               <%= link_to 'Eliminar', product_path(product), class: 'btn btn-success', method: :delete, data: {confirm: 'Seguro?'} %>
               <% end %>
           </div>

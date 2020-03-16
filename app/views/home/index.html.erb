@@ -4,8 +4,8 @@
 </div>
 
 <!--IMAGEN FIJA-->
-<div class="">
-<img src="/assets/n1.jpg" class="img-fluid" alt="Responsive image" alt="notas_cromaticas_1">
+<div class="img-fluid" alt="Responsive image" alt="notas_cromaticas_1">
+<%= image_tag "n1.jpg" %>
 </div>
 
 
@@ -109,7 +109,19 @@
         <h5 class="card-title"><strong>Cuadernos y otros</strong></h5>
         <hr>
         <p class="card-text">Cuadernos con hojas rayadas, tazas.</p>
-        <button type="button" class="btn btn-secondary btn-sm"><%= link_to products_path(@products) do %> Ver más <% end %></button>
+       
+       
+  
+      
+      
+      <div class="button btn-sm text-light btn btn-secondary">
+          <%= link_to 'Ver más', products_path(@product), :class => "btn" %> 
+      </div>
+     
+      
+      
+      
+      
       </div>
     </div>
   </div>

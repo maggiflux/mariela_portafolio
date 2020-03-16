@@ -5,6 +5,11 @@ email: admin@mail.com
 name: admin
 password: desafiolatam
 
+DATOS DE USUARIO AMAZON
+Name: John Doe
+email: sb-jldbo600854@personal.example.com
+password: qK6hvbs&
+
 # COUNTER_HELPS _YOU
 
 Portafolio de fotografía
