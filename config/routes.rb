@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  get 'galleries/index'
   get 'gallery/home'
   resources :billings, only: [] do
       collection do 
@@ -23,7 +24,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :gallery
+  resources :galleries
   resources :products
   resources :categories
   devise_for :users
