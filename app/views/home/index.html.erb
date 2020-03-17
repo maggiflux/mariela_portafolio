@@ -1,10 +1,10 @@
 <!--PRIMERA IMAGEN-->
-<div class="img-fluid" alt="Responsive image" alt="morpho">
-  <%= image_tag "Morpho.jpg" %>
+<div>
+  <%= image_tag "Morpho.jpg", class: "img-fluid", alt: "morpho" %>
 </div>
 <!--SEGUNDA IMAGEN-->
 <div class="">
-  <img src="/assets/n1.jpg" class="img-fluid" alt="Responsive image" alt="primavera1">
+  <%= image_tag "n1.jpg", class: "img-fluid", alt: "n1" %>
 </div>
 <!--CAROUSEL-->
 <div class="jumbotron bg-transparent m-5 p-5">
@@ -17,7 +17,7 @@
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="/assets/all3.jpg" class="d-block w-100" alt="merida">
+        <%= image_tag "all3.jpg", class: "d-block w-100", alt: "merida"  %>
         <div class="carousel-caption d-none d-md-block">
           <h5>AGREGAR TITULO</h5>
           <p>Y SUBTITULO LINK.</p>
