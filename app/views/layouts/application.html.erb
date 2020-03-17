@@ -31,7 +31,7 @@
   <div class="container">
     <a class="navbar-brand" href="#">
     <%= link_to home_index_path(@home) do %>
-          <img src="/assets/logo_navbar.svg" width="160" height="40" alt="logo">
+          <%= image_tag "logo_navbar.svg", width:"160", height:"40", alt:"logo" %>
           <% end %>
           </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
