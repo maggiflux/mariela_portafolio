@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :events
+  get 'calendars/index'
   get 'galleries/index'
   get 'gallery/home'
   resources :billings, only: [] do

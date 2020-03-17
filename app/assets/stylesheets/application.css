@@ -12,7 +12,10 @@
  *
  *= require_tree .
  *= require_self
+ *= require fullcalendar/dist/fullcalendar
+ *= require bootstrap/dist/css/bootstrap
  */
+
 
 html,
 body {
