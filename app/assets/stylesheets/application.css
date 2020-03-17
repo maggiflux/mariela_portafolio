@@ -14,10 +14,16 @@
  *= require_self
  */
 
+html,
 body {
     font-family: 'IBM Plex Sans'
 
 }
+
+#navbar {
+    background-color: #131314;
+}
+
 
 #body1 {
     background-color: #16181a;
@@ -28,20 +34,10 @@ body {
 }
 
 
- footer {
-    background-color: #22262b;
+footer {
+    flex-shrink: none;
+    background-color: #131314;
     fill: white;
     color: white;
-
-}
-
-#footerinterno {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: grey;
-    
-   
   }
- 
+
