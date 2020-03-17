@@ -27,7 +27,7 @@ $(document).on('ready turbolinks:load', function(){
       },
       eventDrop: function(event, delta, revertFunc) {
         if (event.start.format() < moment().format()){
-          alert('No no nooo')
+          alert('No')
           revertFunc(); 
         } else {
           $.ajax({
