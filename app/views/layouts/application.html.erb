@@ -27,7 +27,7 @@
 <body>
 
 <!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow fixed-top p-4 px-5">
+<nav id="barra" class="navbar navbar-expand-lg navbar-dark bg-dark shadow fixed-top text-white p-4 px-5">
   <div class="container">
     <a class="navbar-brand" href="#">
     <%= link_to home_index_path(@home) do %>
@@ -39,24 +39,31 @@
         </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-          <a class="nav-link pr-2">
-                <%= link_to 'Galería', galleries_index_path(@galleries) %>
+        <li class="nav-item active px-1">
+          <a class="">
+                <%= link_to 'Galería', galleries_index_path(@galleries), class:"text-white" %>
               </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">
-          <%= link_to 'Tienda', products_path(@product) %></a>
+        <li class="nav-item px-3">
+          <a class="">
+          <%= link_to 'Tienda', products_path(@product), class:"text-white" %></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">
-             <%= link_to orders_path(@order) do %>
-        <i class="text-muted fas fa-shopping-cart"></i>
-        <% end %>
-        <%= link_to new_user_session_path(@user) do %>
-        <i class="text-muted far fa-user-circle"></i>
-        <% end %>
-        <%= link_to "Sign out", destroy_user_session_path, method: "delete" %>
+          <a class="" >
+        
+         <%= link_to "Sign in / ", new_user_session_path(@user), class:"text-white" %>
+         
+        <%= link_to "Sign out", destroy_user_session_path, class:"text-white", method: :delete %>
+
+
+        <%= link_to orders_path(@order) do %>
+          <i class="text-white fas fa-shopping-cart px-2"></i>
+       <% end %>
+
+
+          
+       
+       
         </a>
         </li>
       </ul>

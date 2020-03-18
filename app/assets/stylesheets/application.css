@@ -20,21 +20,46 @@
 html,
 body {
     font-family: 'IBM Plex Sans'
-
 }
+
+p {
+    font-weight: lighter;
+}
+
+h5 {
+    font-weight: bold;
+}
+
+hr {
+    border-top: 1px dotted rgb(155, 144, 144);
+  }
+
 
 .p1 {
     background-attachment: fixed;
   }
 
+.barra {
+    text-decoration:none; 
+    
+}
+
 #navbar {
+    text-decoration:none; 
     background-color: #131314;
+}
+
+
+h3{
+    text-align: center;
+    font-size: 1.4rem;
 }
 
 
 #body1 {
     background-color: #16181a;
 }
+
 
 #botonindex1 {
     color: white;

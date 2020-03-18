@@ -6,7 +6,7 @@ class Event < ApplicationRecord
     
       def start_date_cannot_be_in_the_past
         if start.present? && start < Date.today
-          errors.add(:start, "No")
+          errors.add(:start, "No puedes modificar el evento")
         end
       end
     end

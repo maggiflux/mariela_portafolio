@@ -50,18 +50,15 @@
 <!--CLASES-->
 <div class="card text-center bg-dark text-white">
   <div class="card-header">
-    ACERCA DE
+   <h3> Clases</h3>
   </div>
-  <div class="card-body">
+  <div class="card-body m-5">
     <h5 class="card-title">xxxxxxx</h5>
     <p class="card-text">Texto explicando.</p>
-    <div class="button btn-sm text-light btn btn-light">
-      <%= link_to 'Conéctate', calendars_index_path(@calendar), :class => "btn" %>
+      <br>
+      <%= link_to 'Agendar', calendars_index_path(@calendar), class:"btn btn-light" %>
     </div>
-  </div>
-  <div class="card-footer text-muted">
-    <br>
-  </div>
+  </div>  
 </div>
 <!--TIENDA-->
 <div class="jumbotron bg-transparent m-5 p-5">
@@ -72,8 +69,7 @@
         <h5 class="card-title"><strong>Cuadros</strong></h5>
         <hr>
         <p class="card-text">Impresos en lienzo o papel fotográfico con montaje en cañuelas y parpastú.</p>
-        <button type="button" class="btn btn-secondary btn-sm"><%= link_to products_path(@products) do %> Ver más
-          <% end %></button>
+        <%= link_to 'Ver más', products_path(@product), class:'btn btn-secondary btn-sm' %>
       </div>
     </div>
     <div class="card">
@@ -82,8 +78,7 @@
         <h5 class="card-title"><strong>Posters</strong></h5>
         <hr>
         <p class="card-text">Impresos en papel fotográfico matte y brillante.</p>
-        <button type="button" class="btn btn-secondary btn-sm"><%= link_to products_path(@products) do %> Ver más
-          <% end %></button>
+       <%= link_to 'Ver más', products_path(@product), class:'btn btn-secondary btn-sm' %>
       </div>
     </div>
     <div class="card">
@@ -92,8 +87,7 @@
         <h5 class="card-title"><strong>Poleras y sweters</strong></h5>
         <hr>
         <p class="card-text">Todas las tallas disponibles, colores y diseños.</p>
-        <button type="button" class="btn btn-secondary btn-sm"><%= link_to products_path(@products) do %> Ver más
-          <% end %></button>
+        <%= link_to 'Ver más', products_path(@product), class:'btn btn-secondary btn-sm' %>
       </div>
     </div>
     <div class="card">
@@ -102,17 +96,16 @@
         <h5 class="card-title"><strong>Cuadernos y otros</strong></h5>
         <hr>
         <p class="card-text">Cuadernos con hojas rayadas, tazas.</p>
-        <div class="button btn-sm text-light btn btn-secondary">
-          <%= link_to 'Ver más', products_path(@product), :class => "btn" %>
+        <%= link_to 'Ver más', products_path(@product), class:'btn btn-secondary btn-sm' %>
         </div>
       </div>
     </div>
   </div>
 </div>
 <!--CONTACTO-->
-<div>
   <section id="contact" class="container my-5">
     <h2 class="display-3 font-weight-bold text-center my-4">Contáctame</h2>
+    <hr>
     <p class="text-center my-4">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
       magna aliqua. Ut enim ad minim veniam.
