@@ -6,8 +6,8 @@ class Billing < ApplicationRecord
       intent: "sale",
       payer: { payment_method: "paypal" },
       redirect_urls: {
-          return_url: "http://localhost:3000/billings/execute",
-          cancel_url: "http://localhost:3000/" },
+          return_url: "https://obscure-wildwood-21101.herokuapp.com/billings/execute",
+          cancel_url: "https://obscure-wildwood-21101.herokuapp.com/" },
       transactions: [{
         item_list: { items: items },
         amount: { total: total.to_s, currency: "USD" },
