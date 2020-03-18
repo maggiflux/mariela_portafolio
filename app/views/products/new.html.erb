@@ -1,15 +1,23 @@
 <div class="container m-5 p-5">
-<br>
-<br>
+    <br>
+    <br>
+    <br>
+    <section class="gallery-block compact-gallery">
+        <div class="container">
+            <div class="heading">
+                <h3>Nuevo producto</h3>
+                <hr>
 
 
-<h1>New Product</h1>
 
-<%= render 'form', product: @product %>
+                <%= render 'form', product: @product %>
 
-<button type="button" class="btn btn-outline-dark">
-<%= link_to 'Back', products_path %>
-</button>
-<br>
-<br>
+                <button type="button" class="btn btn-outline-dark">
+                    <%= link_to 'Back', products_path %>
+                </button>
+                <br>
+                <br>
+            
+            </div>
+        </div>
 </div>

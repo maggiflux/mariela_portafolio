@@ -41,19 +41,19 @@
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active px-1">
           <a class="">
-                <%= link_to 'Galería', galleries_index_path(@galleries), class:"text-white" %>
+                <%= link_to 'Galería', galleries_index_path(@galleries), class:"text-decoration-none text-white" %>
               </a>
         </li>
         <li class="nav-item px-3">
           <a class="">
-          <%= link_to 'Tienda', products_path(@product), class:"text-white" %></a>
+          <%= link_to 'Tienda', products_path(@product), class:"text-decoration-none text-white" %></a>
         </li>
         <li class="nav-item">
           <a class="" >
         
-         <%= link_to "Sign in / ", new_user_session_path(@user), class:"text-white" %>
+         <%= link_to "Sign in / ", new_user_session_path(@user), class:"text-decoration-none text-white" %>
          
-        <%= link_to "Sign out", destroy_user_session_path, class:"text-white", method: :delete %>
+        <%= link_to "Sign out", destroy_user_session_path, class:"text-decoration-none text-white", method: :delete %>
 
 
         <%= link_to orders_path(@order) do %>

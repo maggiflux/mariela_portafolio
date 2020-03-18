@@ -24,7 +24,7 @@
                 <p class="card-text"><%= number_to_currency(product.price, precision: 0) %>
                 </p>
                 <br>
-                <%= link_to "Agregar al carro", product_orders_path(product), class: 'btn btn-secondary btn-sm', method: :post  %>
+                <%= link_to "Agregar al carrito", product_orders_path(product), class: 'btn btn-secondary btn-sm', method: :post  %>
                 <br>
                 <hr>
                 <!--current_user.admin-->
@@ -42,11 +42,11 @@
         <br>
         <!--current_user.admin-->
         <% if current_user %>
-        <%= link_to 'New Product', new_product_path, class:'btn btn-secondary' %>
+        <%= link_to 'Nuevo producto', new_product_path, class:'btn btn-secondary' %>
         <% end %>
         <br>
         <br>
-        <%= link_to 'Back', new_product_path, class:'btn btn-secondary' %>
+        <%= link_to 'Atrás', new_product_path, class:'btn btn-secondary' %>
         <br>
 </div>
 </div>
