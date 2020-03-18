@@ -23,6 +23,10 @@ body {
 
 }
 
+.p1 {
+    background-attachment: fixed;
+  }
+
 #navbar {
     background-color: #131314;
 }

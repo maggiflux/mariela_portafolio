@@ -1,5 +1,5 @@
 <!--PRIMERA IMAGEN-->
-<div>
+<div id="p1"> 
   <%= image_tag "Morpho.jpg", class: "img-fluid", alt: "morpho" %>
 </div>
 <!--SEGUNDA IMAGEN-->
@@ -8,41 +8,40 @@
 </div>
 <!--CAROUSEL-->
 <div class="jumbotron bg-transparent m-5 p-5">
-  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
-      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-      <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-      <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <%= image_tag "all3.jpg", class: "d-block w-100", alt:"all3"  %>
+        <%= image_tag "all3.jpg", class: "d-block w-100", alt:"all3"  %>  
         <div class="carousel-caption d-none d-md-block">
-          <h5>AGREGAR TITULO</h5>
-          <p>Y SUBTITULO LINK.</p>
-        </div>
+        <h5><strong>First slide label</strong></h5>
+        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      </div> 
       </div>
       <div class="carousel-item">
         <%= image_tag "t4.jpg", class: "d-block w-100", alt:"t4" %>
         <div class="carousel-caption d-none d-md-block">
-          <h5>AGREGAR TITULO</h5>
-          <p>Y SUBTITULO LINK.</p>
-        </div>
+        <h5><strong>First slide label</strong></h5>
+        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      </div>
       </div>
       <div class="carousel-item">
-      <%= image_tag "presa.jpg", class: "d-block w-100", alt:"presa" %>
+        <%= image_tag "presa.jpg", class:"d-block w-100", alt:"presa" %>
         <div class="carousel-caption d-none d-md-block">
-          <h5>AGREGAR TITULO</h5>
-          <p>Y SUBTITULO LINK.</p>
-        </div>
+        <h5><strong>First slide label</h5>
+        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+      </div>
       </div>
     </div>
-    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
     </a>
-    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
