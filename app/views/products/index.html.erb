@@ -5,7 +5,7 @@
   <section class="gallery-block compact-gallery">
     <div class="container">
       <div class="heading">
-        <h3>Tienda</h3>
+        <h3 class="text-uppercase"><strong>Tienda</strong></h3>
         <hr>
       </div>
       <p id="notice"><%= notice %></p>
@@ -13,10 +13,9 @@
         <div class="row"><% @products.each_slice(4) do |row| %><% row.each do |product| %>
           <div class="col-md-3">
             <div class="card">
-              <% if product.image.present? %><% if product.image.attached? %><%= image_tag product.image, size: "200x220" %><% end %><% end %>
+              <% if product.image.present? %><% if product.image.attached? %><%= image_tag product.image, class:"card-img-top" %><% end %><% end %>
               <div class="card-body">
-                <h5 class="card-title"><%= product.product_name %>
-                </h5>
+                <h5 class="card-title"><strong><%= product.product_name %></strong></h5>
                 <hr>
                 <p class="card-text"><%= product.size %>
                 </p>
@@ -25,17 +24,17 @@
                 <p class="card-text"><%= number_to_currency(product.price, precision: 0) %>
                 </p>
                 <br>
-                <%= link_to "Agregar al carrito", product_orders_path(product), class: 'btn btn-secondary btn-sm', method: :post  %>
+                <%= link_to "Agregar al carrito", product_orders_path(product), class: 'btn btn-info btn-sm', method: :post  %>
                 <br>
-                <% if current_user %>
+                <% if current_user.try(:admin?) %>
                 <hr>
                 <% end %>
                 <!--current_user.admin-->
-                <% if current_user %>
-                <%= link_to 'Editar', edit_product_path(product), class: 'btn btn-info btn-sm' %><% end %>
+                <% if current_user.try(:admin?) %>
+                <%= link_to 'Editar', edit_product_path(product), class: 'btn btn-secondary btn-sm' %><% end %>
                 <!--current_user.admin-->
-                <% if current_user %>
-                <%= link_to 'Eliminar', product_path(product), class: 'btn btn-info btn-sm', method: :delete, data: {confirm: 'Seguro?'} %><% end %>
+                <% if current_user.try(:admin?) %>
+                <%= link_to 'Eliminar', product_path(product), class: 'btn btn-secondary btn-sm', method: :delete, data: {confirm: 'Seguro?'} %><% end %>
               </div>
             </div>
           </div><% end %>
@@ -44,12 +43,12 @@
         <br>
         <br>
         <!--current_user.admin-->
-        <% if current_user %>
+        <% if current_user.try(:admin?) %>
         <%= link_to 'Nuevo producto', new_product_path, class:'btn btn-secondary' %>
         <% end %>
         <br>
         <br>
-        <%= link_to 'Atrás', new_product_path, class:'btn btn-secondary' %>
-        <br>
+        <%= link_to 'Atrás', new_product_path, class:'btn btn-secondary' %> <%= link_to 'Tus ordenes', orders_path(@order), class:'btn btn-secondary mx-2 text-left' %>
+        
 </div>
 </div>

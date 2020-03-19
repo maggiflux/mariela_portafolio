@@ -10,7 +10,7 @@
     <strong>Images:</strong>
     <br>
     <% @product.image do |image| %>
-    <%= image_tag image.variant(resize: "200x220") %>
+    <%= image_tag image.variant %>
     <% end %>
   </p>
 <% end %>

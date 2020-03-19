@@ -1,0 +1,9 @@
+
+
+.bg-image {
+    background-image: url('http://tiny.cc/gm8ilz');
+    background-size: cover;
+    background-position: center;
+    border: 2px;
+    border-radius: 8px;
+  }
