@@ -18,22 +18,22 @@
       <div class="carousel-item active">
         <%= image_tag "all3.jpg", class: "d-block w-100", alt:"all3"  %>  
         <div class="carousel-caption d-none d-md-block">
-        <h5><strong>First slide label</strong></h5>
-        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+         <h3><%= link_to 'Mérida', galleries_index_path(@galleries), class:"font-weight-bolder text-decoration-none text-white" %></h3>
+        <p>Serie fotográfica</p>
       </div> 
       </div>
       <div class="carousel-item">
         <%= image_tag "t4.jpg", class: "d-block w-100", alt:"t4" %>
         <div class="carousel-caption d-none d-md-block">
-        <h5><strong>First slide label</strong></h5>
-        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        <h3><%= link_to 'Lágrimas', galleries_index_path(@galleries), class:"font-weight-bolder text-decoration-none text-white" %></h3>
+        <p>Serie fotográfica</p>
       </div>
       </div>
       <div class="carousel-item">
         <%= image_tag "presa.jpg", class:"d-block w-100", alt:"presa" %>
         <div class="carousel-caption d-none d-md-block">
-        <h5><strong>First slide label</h5>
-        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+         <h3><%= link_to 'La presa', galleries_index_path(@galleries), class:"font-weight-bolder text-decoration-none text-white" %></h3>
+        <p>Serie fotográfica</p>
       </div>
       </div>
     </div>
@@ -50,11 +50,10 @@
 <!--CLASES-->
 <div class="card text-center bg-dark text-white">
   <div class="card-header">
-   <h3> Clases</h3>
+   <h3> ¿Quieres aprender fotografía?</h3>
   </div>
   <div class="card-body m-5">
-    <h5 class="card-title">xxxxxxx</h5>
-    <p class="card-text">Texto explicando.</p>
+    <p class="card-text">Selecciona el día que más te guste, en tu horario, en el nivel que estes y recibe clases 100% personalizadas.</p>
       <br>
       <%= link_to 'Agendar', calendars_index_path(@calendar), class:"btn btn-light" %>
     </div>
@@ -84,7 +83,7 @@
     <div class="card">
        <%= image_tag "sweter.jpg", class:"card-img-top", alt:"sweter"%>
       <div class="card-body">
-        <h5 class="card-title"><strong>Poleras y sweters</strong></h5>
+        <h5 class="card-title"><strong>Camisas y sweters</strong></h5>
         <hr>
         <p class="card-text">Todas las tallas disponibles, colores y diseños.</p>
         <%= link_to 'Ver más', products_path(@product), class:'btn btn-secondary btn-sm' %>
@@ -93,7 +92,7 @@
     <div class="card">
       <%= image_tag "cuaderno.jpg", class:"card-img-top", alt:"cuaderno" %>
       <div class="card-body">
-        <h5 class="card-title"><strong>Cuadernos y otros</strong></h5>
+        <h5 class="card-title"><strong>Libretas y otros</strong></h5>
         <hr>
         <p class="card-text">Cuadernos con hojas rayadas, tazas.</p>
         <%= link_to 'Ver más', products_path(@product), class:'btn btn-secondary btn-sm' %>
@@ -107,8 +106,7 @@
     <h2 class="display-3 font-weight-bold text-center my-4">Contáctame</h2>
     <hr>
     <p class="text-center my-4">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua. Ut enim ad minim veniam.
+     Déjame tus dudas, consultas y mensajes.
     </p>
     <div class="typeform-widget" data-url="https://marielamaggi.typeform.com/to/TyGHRK"
       style="width: 100%; height: 500px;"></div>
